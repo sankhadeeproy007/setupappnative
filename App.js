@@ -7,6 +7,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import type { Node } from 'react';
 import {
   SafeAreaView,
@@ -25,6 +26,11 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+Section.propTypes = {
+  children: Node,
+  title: PropTypes.string,
+};
 
 const Section = ({ children, title }): Node => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -54,7 +60,7 @@ const Section = ({ children, title }): Node => {
   );
 };
 
-const abc = 'define';
+// const abc = 'define';
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
