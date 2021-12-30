@@ -54,7 +54,7 @@ const Section = ({ children, title }): Node => {
   );
 };
 
-const abc = 'def'
+const abc = 'define';
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
